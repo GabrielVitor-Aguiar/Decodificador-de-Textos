@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #f3f5fc;
+}
+
+header,
+main {
+  padding: 3vh 3vw;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 85vh;
+  padding: 2vh 14vh 8vh;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 65%;
+  gap: 20px;
+}
+
+#user-input {
+  font-size: 2rem;
+  color: #0a3871;
+  background: transparent;
+  resize: none;
+  border: none;
+  height: 100%;
+  padding: 25px;
+}
+
+#user-input:focus {
+  outline: none;
+  border: 1px solid #0a3871;
+  border-radius: 32px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0 0 20px 25px;
+}
+
+.icon-info {
+  transform: scale(1.5);
+}
+
+.info span:last-child {
+  font-size: 1rem;
+  color: #495057;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.action-buttons button {
+  width: 337px;
+  height: 67px;
+  padding: 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 24px;
+}
+
+.action-buttons button:first-of-type {
+  background-color: #0a3871;
+  color: #ffffff;
+  border: none;
+}
+
+.action-buttons button:last-of-type {
+  background-color: transparent;
+  color: #0a3871;
+  font-weight: bold;
+  border: 1px solid #0a3871;
+}
+
+.output-section {
+  background-color: #ffffff;
+  border-radius: 32px;
+  height: 90vh;
+  position: absolute;
+  bottom: 5vh;
+  left: 72vw;
+  box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column; /* Alterado para coluna */
+  align-items: center;
+  justify-content: center;
+  width: 25vw;
+  padding: 20px;
+}
+
+#output-content {
+    display: none; /* Inicialmente escondido */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 80%;
+    width: 100%;
+  }
+  
+  .empty-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden;
+    display: flex; /* Garanta que o estado vazio seja visível inicialmente */
+  }
+
+.empty-message h1 {
+  color: #343a40;
+  font-size: 1.625rem;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.empty-message p {
+  color: #343a40;
+  font-size: 1rem;
+}
+  
+
+#result-text {
+  width: 100%;
+  height: 83%;
+  border: none;
+  resize: none;
+}
+
+#result-text:focus {
+  outline: none;
+}
+
+#copy-btn {
+  background-color: transparent;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  width: 85%;
+  height: 67px;
+  padding: 24px;
+  color: #0a3871;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px; /* Espaçamento acima do botão */
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-decoration: none;
+  color: #0a3871;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #0a3871;
+}
+
+.footer img{
+    width: 15px;
+}
+
+@media screen and (max-width: 1440px) {
+  main {
+    padding-left: 7vw;
+  }
+
+  .input-section {
+    width: 55%;
+  }
+
+  .output-section {
+    left: 64vw;
+    width: 33vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #empty-state img {
+    width: 250px;
+  }
+
+  .empty-message h1 {
+    font-size: 1.5rem;
+  }
+
+  .empty-message p {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    align-items: center;
+    padding: 2vh 4vw;
+    gap: 50px;
+    height: 120vh;
+    width: 99vw;
+  }
+
+  .input-section {
+    width: 95%;
+  }
+
+  .action-buttons {
+    justify-content: space-between;
+  }
+
+  .action-buttons button {
+    width: 50%;
+  }
+
+  .output-section {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 90vw;
+  }
+
+  #empty-state img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    height: 150vh;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .action-buttons button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) and (max-height: 700px) {
+  .input-section {
+    height: 60%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh 4vw;
+    gap: 50px;
+    height: 150vh;
+    width: 99vw;
+  }
+
+  .input-section div .action-buttons {
+    flex-direction: column;
+  }
+
+  .input-section div .action-buttons button:first-of-type,
+  .input-section div .action-buttons button:last-of-type {
+    width: 100%;
+  }
+}

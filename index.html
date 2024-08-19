@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Codificador de Mensagens</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img class="logo-alura" src="assets/logo.png" alt="Logotipo da Alura">
+    </header>
+
+    <main>
+        <section class="input-section">
+            <textarea id="user-input" class="textarea" cols="10" rows="10"
+                placeholder="Insira seu texto aqui"></textarea>
+            <div>
+                <div class="info">
+                    <span class="icon-info">ℹ</span>
+                    <span>Use apenas letras minúsculas sem acentuação.</span>
+                </div>
+                <div class="action-buttons">
+                    <button id="encode-btn">Codificar</button>
+                    <button id="decode-btn">Decodificar</button>
+                </div>
+            </div>
+        </section>
+
+        <aside class="output-section">
+            <div id="empty-state" class="empty-message">
+                <img src="./assets/pessoa.png" alt="Pessoa com uma lupa">
+                <h1>Nenhuma mensagem disponível</h1>
+                <p>Escreva uma mensagem para codificar ou decodificar.</p>
+            </div>
+            <div id="output-content">
+                <textarea readonly id="result-text"></textarea>
+                <button id="copy-btn">Copiar Texto</button>
+            </div>
+        </aside>
+    </main>
+    <footer class="footer">
+        <p>Criado por Gabriel Vitor Santos de Aguiar</p>
+        <a href="https://github.com/GabrielVitor-Aguiar"><img src="./assets/github.png">Github</a>
+    </footer>
+</body>
+
+</html>
